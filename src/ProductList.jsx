@@ -297,7 +297,7 @@ function ProductList() {
                                         <img className="product-image" src={plant.image} alt={plant.name} />
                                         <div className="product-title">{plant.name}</div>
                                         {/*Similarly like the above plant.name show other details like description and cost*/}
-                                        <button disabled={alreadyInCart(plant.name)? true:false} className="product-button" onClick={() => handleAddToCart(plant)}>Add to Cart</button>
+                                        <button disabled={alreadyInCart(plant.name)? true:false} className={alreadyInCart(plant.name)? "product-button-disabled": "product-button"} onClick={() => handleAddToCart(plant)}>{alreadyInCart(plant.name)? 'Added to Cart':'Add to Cart'}</button>
                                     </div>
                                 ))}
                             </div>
